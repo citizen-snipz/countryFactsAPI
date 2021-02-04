@@ -80,15 +80,13 @@ input {
   border: 0;
 }
 
-.recipeBody {
-  display: flex;
-  width: 90vw;
-  flex-wrap: wrap;
-  justify-content: center;
+.resultsBody {
+  width: 60%;
+  flex-grow: 3;
 }
 
 .card {
-  width: 60%;
+  min-width: 60%;
   border: 2px solid rgb(9, 85, 15);
   background-color: rgba(154, 241, 212, 0.703);
   padding: 1em 2em;
@@ -102,4 +100,22 @@ span,
 p {
   font-style: italic;
   font-size: 1.6rem;
+}
+
+.dataWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currencyConverter {
+  max-width: 30%;
+  height: 50vh;
+  background-color: rgba(255, 255, 255, 0.603);
+  flex-grow: 0;
+  padding: 3rem;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  margin-top: 4rem;
+  align-self: start;
 }

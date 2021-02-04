@@ -43,6 +43,7 @@ function getFetch() {
       document
         .querySelector(".resultsBody")
         .insertAdjacentHTML("afterbegin", getCountryData(data[0]));
+      fetchCurrencyConversion(data[0].currencies[0].code);
     })
     .catch((err) => {
       console.log(`error ${err}`);
@@ -62,7 +63,9 @@ function fetchRandom() {
       document
         .querySelector(".resultsBody")
         .insertAdjacentHTML("afterbegin", getCountryData(data[random]));
+      fetchCurrencyConversion(data[random].currencies[0].code);
     })
+
     .catch((err) => {
       console.log(`error ${err}`);
     });
@@ -78,19 +81,17 @@ searchBtn.addEventListener("click", fetchCurrencyConversion);
 const randomConvert = document.querySelector(".randomBtn");
 randomBtn.addEventListener("click", fetchCurrencyConversion);
 
-function fetchCurrencyConversion() {
-  const currCode = getCountryData(data.currencies[0].code);
-  const currUrl =
-    "http://api.currencylayer.com/live?access_key=2f2e790cf2d7285d39d0cedfc19813bb&source=USD&quotes=${currCode}";
+function fetchCurrencyConversion(currency) {
+  const currUrl = `http://api.currencylayer.com/live?access_key=2f2e790cf2d7285d39d0cedfc19813bb&source=USD`;
 
-  fetch(url)
+  fetch(currUrl)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
       console.log(data);
-      // document.querySelector(".resultsBody").innerHTML = "";
-      // document
-      //   .querySelector(".currencyConverter")
-      //   .insertAdjacentHTML("afterbegin", currCode);
+      document.querySelector(
+        ".currencyConverter"
+      ).innerHTML = `Currency conversion: <br>
+      ${currency} is valued at ${data.quotes["USD" + currency]} per 1 USD`;
     })
     .catch((err) => {
       console.log(`error ${err}`);
