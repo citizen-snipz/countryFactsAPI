@@ -1,0 +1,105 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+  text-align: center;
+  margin: 5em;
+  background-color: rgb(248, 240, 232);
+  background-image: url("https://images.unsplash.com/photo-1478860409698-8707f313ee8b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjg1fHx3b3JsZCUyMG1hcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top top;
+  color: rgb(32, 31, 31);
+  text-shadow: 1px 1px 1px rgb(192, 237, 240);
+}
+
+img {
+  width: 60%;
+
+  display: block;
+  margin: 2em auto;
+
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.685), 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+h1 {
+  font-size: 2.8rem;
+  color: rgb(10, 10, 10);
+  text-shadow: 1px 1px 3px rgba(252, 251, 251, 0.685),
+    2px 3px 5px rgba(248, 245, 245, 0.3);
+}
+
+a,
+h2 {
+  color: rgb(3, 105, 46);
+  text-shadow: 1px 1px 1px rgb(197, 224, 39);
+}
+
+h2 {
+  font-size: 4.5em;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: rgb(62, 120, 197);
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em 1em;
+  color: rgb(238, 236, 236);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(65, 112, 2);
+}
+
+input {
+  height: 2.6em;
+  width: 20%;
+  border-radius: 5px;
+  border: 0;
+}
+
+.recipeBody {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 60%;
+  border: 2px solid rgb(9, 85, 15);
+  background-color: rgba(154, 241, 212, 0.703);
+  padding: 1em 2em;
+  margin-top: 3em;
+  border-radius: 25px;
+  color: rgb(9, 85, 15);
+  text-shadow: 1px 1px 1px rgb(197, 224, 39);
+}
+
+span,
+p {
+  font-style: italic;
+  font-size: 1.6rem;
+}
