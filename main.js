@@ -17,15 +17,15 @@ function getCountryData(country) {
 			<div class="card">
 				<h2>${country.name}</h2>
         <img src="${country.flag}" alt="Flag of ${country.name}">
-        <h3 class="ingredients"><span class=title">Capital:</span> ${
-          country.capital
-        }</h3>
+        <h3><span class=title">Capital:</span> ${country.capital}</h3>
         <h3 class="location">Located in ${country.subregion}</h3>
         <h4><span class=title"> Main language(s):</span> ${langs}</h4>
         <h4><span class=title">Population:</span> ${country.population}</h4>
         <h4><span class=title">Currency:</span> ${
-          country.currencies[0].name
-        } ( ${country.currencies[0].symbol || "data not available"} )</h4>
+          country.currencies[0].code
+        } - ${country.currencies[0].name} ( ${
+    country.currencies[0].symbol || "data not available"
+  } )</h4>
       </div>
       `;
 }
@@ -88,10 +88,13 @@ function fetchCurrencyConversion(currency) {
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
       console.log(data);
+      document.querySelector(".currencyConverter").classList.remove("hidden");
       document.querySelector(
         ".currencyConverter"
-      ).innerHTML = `Currency conversion: <br>
-      ${currency} is valued at ${data.quotes["USD" + currency]} per 1 USD`;
+      ).innerHTML = `<i class="far fa-money-bill-alt fa-3x"></i><br> <span class=title">  Currency conversion:</span> <br>
+      ${currency} is currently valued at ${
+        data.quotes["USD" + currency]
+      } per 1 USD`;
     })
     .catch((err) => {
       console.log(`error ${err}`);
