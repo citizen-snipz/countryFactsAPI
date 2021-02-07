@@ -50,13 +50,13 @@ h2 {
 }
 
 h2 {
-  font-size: 4.5em;
+  font-size: 3em;
   margin-bottom: 0;
   text-decoration: underline;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 h4 {
@@ -91,8 +91,8 @@ input {
   min-width: 60%;
   border: 2px solid rgb(9, 85, 15);
   background-color: rgba(255, 255, 255, 0.664);
-  padding: 1em 2em;
-  margin-top: 3em;
+  padding: 0.2em 2em;
+  margin-top: 2.4em;
   border-radius: 20px;
   color: rgb(9, 85, 15);
   text-shadow: 1px 1px 1px rgb(197, 224, 39);
@@ -112,7 +112,7 @@ p {
 
 .currencyConverter {
   width: 30%;
-  height: 50vh;
+  height: fit-content;
   background-color: rgba(255, 255, 255, 0.664);
   flex-grow: 1;
   padding: 4rem 3rem;
