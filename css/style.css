@@ -63,6 +63,11 @@ h4 {
   font-size: 1.5rem;
 }
 
+h3,
+h4 {
+  margin: 0.5em 1em;
+}
+
 button {
   background-color: rgb(62, 120, 197);
   border-radius: 5px;
@@ -115,10 +120,10 @@ p {
   height: fit-content;
   background-color: rgba(255, 255, 255, 0.664);
   flex-grow: 1;
-  padding: 4rem 3rem;
+  padding: 3rem 3rem;
   font-size: 2rem;
   margin-left: 1rem;
-  margin-top: 3.3rem;
+  margin-top: 2.6rem;
   align-self: start;
   border: 2px solid rgb(9, 85, 15);
   border-radius: 15px;
